@@ -1,10 +1,10 @@
-import logo from './logo.svg';
 import './App.css';
+import Body from './components/Body';
 
 function App() {
   return (
-    <div className="font-bold p-30 m-4">
-      Netflix
+    <div >
+      <Body />
     </div>
   );
 }
