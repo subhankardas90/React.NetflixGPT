@@ -7,6 +7,10 @@ export const USER_ICON ="https://occ-0-1492-3663.1.nflxso.net/dnm/api/v6/K6hjPJd
 export const PHOTO_URL = "https://avatars.githubusercontent.com/u/31127573?s=400&u=5b94186ccd5ef665292386adc9e7fbb4302edaf3&v=4"
 
 export const TMDB_NOWPLAYING_URL = 'https://api.themoviedb.org/3/movie/now_playing?language=en-US&page=1';
+export const TMDB_POPULAR_URL = 'https://api.themoviedb.org/3/movie/popular?language=en-US&page=1';
+export const TMDB_TOPRATED_URL = 'https://api.themoviedb.org/3/movie/top_rated?language=en-US&page=1';
+export const TMDB_UPCOMING_URL = 'https://api.themoviedb.org/3/movie/upcoming?language=en-US&page=1';
+export const TMDB_AIRINGTV_URL ='https://api.themoviedb.org/3/tv/airing_today?language=en-US&page=1';
 export const TMDB_OPTIONS = {
   method: 'GET',
   headers: {
@@ -14,3 +18,8 @@ export const TMDB_OPTIONS = {
     Authorization: 'Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiI4YzE3NGQ2OWViMjY2ODFlYmM5NmU5ZmI2MGE4Mjk5ZiIsInN1YiI6IjY1Njc1MTVjZDk1NDIwMDBjNDFmZDE4NSIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.oJXcrsBp32og2JGUidXtdiBl6RU4hMECzS9OhdIFOXE'
   }
 };
+
+export const IMG_CDN_URL = "https://image.tmdb.org/t/p/w500";
+
+export const BG_URL =
+  "https://assets.nflxext.com/ffe/siteui/vlv3/fc164b4b-f085-44ee-bb7f-ec7df8539eff/d23a1608-7d90-4da1-93d6-bae2fe60a69b/IN-en-20230814-popsignuptwoweeks-perspective_alpha_website_large.jpg";
