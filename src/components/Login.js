@@ -4,7 +4,6 @@ import { NETFLIX_BACKGROUND_LOGO, PHOTO_URL } from '../utils/constant'
 import { checkValidSignInData, checkValidSignUpData } from "../utils/validate";
 import { createUserWithEmailAndPassword, signInWithEmailAndPassword, updateProfile } from 'firebase/auth';
 import { auth } from '../utils/firebase'
-import { useNavigate } from 'react-router-dom';
 import { useDispatch } from 'react-redux';
 import { addUser } from '../utils/userSilce';
 
@@ -15,7 +14,6 @@ const Login = () => {
   const email = useRef(null);
   const password = useRef(null);
   const name = useRef("");
-  const navigate = useNavigate();
   const dispatch = useDispatch();
 
   const toggleSignInForm =() =>{
@@ -40,7 +38,6 @@ const Login = () => {
               }).then(() => {
                 const {uid, email, displayName, photoURL} = auth.currentUser;
                 dispatch(addUser({uid:uid, email: email, displayName:displayName, photoURL:photoURL}))
-                navigate("/browse");
               }).catch((error) => {
                 setErrorMessage(error.message);
               });
@@ -58,7 +55,6 @@ const Login = () => {
           // Signed in 
           const user = userCredential.user;
           console.log(user);
-          navigate("/browse");
           // ...
         })
         .catch((error) => {
