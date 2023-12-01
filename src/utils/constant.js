@@ -15,7 +15,7 @@ export const TMDB_OPTIONS = {
   method: 'GET',
   headers: {
     accept: 'application/json',
-    Authorization: 'Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiI4YzE3NGQ2OWViMjY2ODFlYmM5NmU5ZmI2MGE4Mjk5ZiIsInN1YiI6IjY1Njc1MTVjZDk1NDIwMDBjNDFmZDE4NSIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.oJXcrsBp32og2JGUidXtdiBl6RU4hMECzS9OhdIFOXE'
+    Authorization: 'Bearer ' + process.env.REACT_APP_TMDB_KEY
   }
 };
 
