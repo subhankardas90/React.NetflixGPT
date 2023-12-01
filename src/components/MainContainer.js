@@ -9,7 +9,9 @@ const MainContainer = () => {
   if(!movies)
     return;
   let randomnumber = Math.floor(Math.random() * (20 - 1 + 1)) + 1;
-  const mainMovie = movies[randomnumber]; 
+  let mainMovie = movies[randomnumber]; 
+  while(!mainMovie.original_title)
+    mainMovie = movies[randomnumber]; 
   const {original_title, overview, id } = mainMovie;
   return (
     <div>
