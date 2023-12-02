@@ -8,10 +8,12 @@ import GptSearch from './GptSearch';
 import Header from './Header'
 import MainContainer from './MainContainer';
 import SecondaryContainer from './SecondaryContainer';
+import ClipVideoPage from './ClipVideoPage';
 
 const Browse = () => {
 
-  const showGPTSearch = useSelector(state => state.gpt?.showGptSearch)
+  const showGPTSearch = useSelector(state => state.gpt?.showGptSearch);
+  const movieDetails = useSelector(store=> store.movie?.movieDetails);
   useNowPlayingMovies();
   usePopularMovies();
   useTopratedMovies();
@@ -20,14 +22,17 @@ const Browse = () => {
   return (
     <div>
        <Header />
-      {showGPTSearch ? (
-        <GptSearch />
-      ) : (
-        <>
-          <MainContainer />
-          <SecondaryContainer />
-        </>
-      )}
+      {
+      movieDetails ? 
+      <ClipVideoPage />
+        :showGPTSearch ? (
+          <GptSearch />
+        ) : (
+          <>
+            <MainContainer />
+            <SecondaryContainer />
+          </>
+        )}
     </div>
   )
 }
